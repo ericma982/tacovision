@@ -9,14 +9,6 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-<html>
-  <form>
-  Address:<br>
-  <input type="text" name="address">
-</form>
-</html>
-
-
 ```markdown
 Syntax highlighted code block
 
