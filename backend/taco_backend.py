@@ -1,6 +1,7 @@
 import pandas as pd
 
 tacos = pd.read_csv('final_final_tacos.csv')
+restaurants = pd.read_csv('restaurants.csv')
 
 address = input("Please enter the central street address: ").split()
 city = input("Please enter the city: ")
@@ -34,7 +35,7 @@ R = 3958.8
 lat1 = radians(lat_long[0])
 lon1 = radians(lat_long[1])
 in_radius_rows = []
-for index, row in tacos.iterrows():
+for index, row in restaurants.iterrows():
     lat2 = radians(row['latitude'])
     lon2 = radians(row['longitude'])
 
@@ -54,4 +55,5 @@ for index, row in tacos.iterrows():
 
 in_radius_rows.sort(key=lambda tup: tup[1])
 for row, distance in in_radius_rows:
-    print(row['menus.name'], 'at', row['name'], 'in', row['city'] + ', ' + row['state'], distance, 'miles away')
+    print(row['name'], 'in', row['city'] + ', ' + row['state'], distance, 'miles away')
+    #print('***', 'serves', row['taco'])
