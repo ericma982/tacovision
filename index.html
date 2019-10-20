@@ -13,6 +13,45 @@ body, html {
   color: #777;
   line-height: 1.8;
 }
+  
+input{
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    height: 20px;
+    width: 500px;
+    border:1px solid #eaeaea;
+    outline:none;
+}
+input:hover{
+    border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+input:focus{
+    border-color:#4d90fe;
+}
+
+input[type="submit"] {
+    border-radius: 2px;
+    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    color: #757575;
+    cursor: default;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    padding: 0 16px;
+    height:36px;
+}
+input[type="submit"]:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #222;
+}
+  
+  
+  
 
 /* Create a Parallax Effect */
 .bgimg-1 {
@@ -63,7 +102,7 @@ body, html {
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <!--<div class="w3-display-middle" style="white-space:nowrap;">-->
     <img style="display: block; margin-left: auto; margin-right: auto; max-width: 20%;" src="https://raw.githubusercontent.com/ericma982/tacovision/master/taco.png">
-    <form>
+    <form action="result.php">
       <input style="display: block; margin-left: auto; margin-right: auto; aria-label: "Enter address"; padding-bottom: 20px; width: 200px;" type="text">
       <input style="display: block; margin-left: auto; margin-right: auto;" type="submit" value="Search">
     </form>
