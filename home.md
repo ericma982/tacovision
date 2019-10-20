@@ -1,6 +1,0 @@
-<html>
-<form>
-  Address:<br>
-  <input type="text" name="address">
-</form>
-</html>
