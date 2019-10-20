@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html>
   <body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="ratios.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Ratio Insights</a>
+    <a href="types.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Type Insights</a>
+    </a>
+  </div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+    <a href="ratios.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Ratio Insights</a>
+    <a href="types.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Type Insights</a>
+  </div>
+</div>
+
+    
 <div class='tableauPlaceholder' id='viz1571567726624' style='position: relative'>
     <noscript>
         <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6T&#47;6TB9ST3R2&#47;1_rss.png' style='border: none' /></a>
@@ -26,6 +47,28 @@
     var scriptElement = document.createElement('script');
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+    
+    <script>
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
 </script>
   </body>
 </html>
