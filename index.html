@@ -24,7 +24,7 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("https://raw.githubusercontent.com/ericma982/tacovision/master/Screenshot%20from%202019-10-19%2023-11-44.png");
+  background-image: url("https://raw.githubusercontent.com/ericma982/tacovision/master/tacovision.png");
   min-height: 100%;
 }
 
@@ -40,8 +40,8 @@ body, html {
 }
 </style>
 <body>
-
 <!-- Navbar (sit on top) -->
+<!--
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
@@ -51,54 +51,24 @@ body, html {
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     </a>
   </div>
-
+-->
   <!-- Navbar on small screens -->
+<!--
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
   </div>
 </div>
-
+-->
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <!--<div class="w3-display-middle" style="white-space:nowrap;">-->
     <img style="display: block; margin-left: auto; margin-right: auto; max-width: 20%;" src="https://raw.githubusercontent.com/ericma982/tacovision/master/taco.png">
-    <form action="results.php">
+    <form>
       <input style="display: block; margin-left: auto; margin-right: auto; aria-label="Enter address"; padding-bottom= 20px;" type="text">
       <input style="display: block; margin-left: auto; margin-right: auto;" type="submit" value="Search">
     </form>
   <!--</div>-->
 </div>
-  
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
+ 
 </body>
 </html>
